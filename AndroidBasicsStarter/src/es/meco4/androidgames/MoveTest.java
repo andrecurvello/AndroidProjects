@@ -19,45 +19,45 @@ import android.view.View.OnTouchListener;
 /**
  * <p>Esta clase muestra varias figuras en pantalla.</p>
  * <ul>
- * <li>Una línea diagonal que permanece inmutable en toda la vida de la actividad.</li>
+ * <li>Una lï¿½nea diagonal que permanece inmutable en toda la vida de la actividad.</li>
  * <li>Un cuadrado relleno que se puede mover con el dedo.</li>
- * <li>Un círculo relleno que se puede mover con el dedo.<<li>
+ * <li>Un cï¿½rculo relleno que se puede mover con el dedo.<<li>
  * </ul>
  * <p>Implementa la interfaz OnTouchListener para recoger los eventos que se puedan
  * producir de toques de pantalla. De esta manera recogemos las coordenadas correspondientes
- * al toque realizado y posicionamos la figura que esté más cerca del toque.</p>
+ * al toque realizado y posicionamos la figura que estï¿½ mï¿½s cerca del toque.</p>
  * @author Oscar
  *
  */
 public class MoveTest extends Activity implements OnTouchListener {
 
-	/** Este objeto es el que recoge la visualización de las formas pintadas en pantalla */
+	/** Este objeto es el que recoge la visualizaciï¿½n de las formas pintadas en pantalla */
 	RenderView renderView;
-	/** Coordenada X de posicionamiento del círculo */
+	/** Coordenada X de posicionamiento del cï¿½rculo */
 	float x = 100;
-	/** Coordenada Y de posicionamiento del círculo */
+	/** Coordenada Y de posicionamiento del cï¿½rculo */
 	float y = 100;
 	/** Coordenada X de posicionamiento del cuadrado */
 	float xc = 100;
 	/** Coordenada Y de posicionamiento del cuadrado */
 	float yc = 100;
-	/** Enumeración de las figuras móviles de la pantalla */
+	/** Enumeraciï¿½n de las figuras mï¿½viles de la pantalla */
 	enum obj_movement {
-		/** Figura que corresponde con el círculo */
+		/** Figura que corresponde con el cï¿½rculo */
 		circle,
 		/** Figura que corresponde con el cuadrado */
 		rect,
-		/** No existe ninguna figura que esté en movimiento */
+		/** No existe ninguna figura que estï¿½ en movimiento */
 		nothing
 	}
 
 	/** Estado en el que se encuentra el toque. Inicialmente cancelado. */
 	int status = MotionEvent.ACTION_CANCEL;
-	/** Figura que se está moviendo en este momento */
+	/** Figura que se estï¿½ moviendo en este momento */
 	obj_movement moving = obj_movement.nothing; 
 
 	/**
-	 * Clase anidada que representa el contenedor de la pantalla donde se dibujarán
+	 * Clase anidada que representa el contenedor de la pantalla donde se dibujarï¿½n
 	 * todas las figuras
 	 * @author Oscar
 	 *
@@ -76,7 +76,7 @@ public class MoveTest extends Activity implements OnTouchListener {
 		}
 		
 		/**
-		 * Método sobreescrito que se ejecuta cada vez que se repinta la pantalla
+		 * Mï¿½todo sobreescrito que se ejecuta cada vez que se repinta la pantalla
 		 * @param canvas contenedor de los dibujos
 		 */
 		protected void onDraw(Canvas canvas) {
@@ -121,9 +121,9 @@ public class MoveTest extends Activity implements OnTouchListener {
 	}
 
 	/**
-	 * Evento de interacción con la pantalla, ya sea tocarla, mover el dedo
+	 * Evento de interacciÃ³n con la pantalla, ya sea tocarla, mover el dedo
 	 * o levantar el dedo. Si se levanta el dedo, entonces se establece que no
-	 * hay ningún objeto en movimiento.
+	 * hay ningÃºn objeto en movimiento.
 	 */
 	@Override
 	public boolean onTouch(View v, MotionEvent event) {
@@ -141,19 +141,19 @@ public class MoveTest extends Activity implements OnTouchListener {
 	}
 
 	/**
-	 * <p>Método que establece qué figura es la que se tiene que mover. Recibe las coordenadas
-	 * que le informan dónde se encuentra el puntero del usuario.</p>
+	 * <p>Mï¿½todo que establece quï¿½ figura es la que se tiene que mover. Recibe las coordenadas
+	 * que le informan dï¿½nde se encuentra el puntero del usuario.</p>
 	 * <p>El funcionamiento es muy simple:</p>
 	 * <ul>
-	 * <li>Si el círculo se encuentra en movimiento, las nuevas coordenadas son del círculo.</li>
+	 * <li>Si el cï¿½rculo se encuentra en movimiento, las nuevas coordenadas son del cï¿½rculo.</li>
 	 * <li>Si el cuadrado se encuentra en movimiento, las nuevas coordenadas son del cuadrado.</li>
-	 * <li>Si no sucede nada de lo anterior, miramos si estamos cerca del círculo. Si es así, el
-	 * círculo se mueve a las coordenadas indicadas. Se establece entonces que el círculo se
+	 * <li>Si no sucede nada de lo anterior, miramos si estamos cerca del cï¿½rculo. Si es asï¿½, el
+	 * cï¿½rculo se mueve a las coordenadas indicadas. Se establece entonces que el cï¿½rculo se
 	 * encuentra en movimiento.</li>
-	 * <li>Si no sucede nada de lo anterior, miramos si estamos cerca del cuadrado. Si es así, el
+	 * <li>Si no sucede nada de lo anterior, miramos si estamos cerca del cuadrado. Si es asï¿½, el
 	 * cuadrado se mueve a las coordenadas indicadas. Se establece entonces que el cuadrado se
 	 * encuentra en movimiento.</li>
-	 * <li>Si no sucede nada de lo anterior, entonces se establece que no hay ningún objeto en
+	 * <li>Si no sucede nada de lo anterior, entonces se establece que no hay ningï¿½n objeto en
 	 * movimiento.</li>
 	 * </ul> 
 	 * @param xp coordenada x donde apunta el usuario
@@ -190,12 +190,12 @@ public class MoveTest extends Activity implements OnTouchListener {
 	}
 	
 	/**
-	 * Función que comprueba si las coordenadas que ha tocado el usuario se encuentran dentro del
-	 * radio de acción del cuadrado. Hay que notar que las coordenadas se miran a partir del centro
+	 * Funciï¿½n que comprueba si las coordenadas que ha tocado el usuario se encuentran dentro del
+	 * radio de acciï¿½n del cuadrado. Hay que notar que las coordenadas se miran a partir del centro
 	 * justo del cuadrado.
 	 * @param xp coordenada x donde apunta el usuario
 	 * @param yp coordenada y donde apunta el usuario
-	 * @return devuelve <code>true</code> en caso de que el toque se encuentre dentro del radio de acción
+	 * @return devuelve <code>true</code> en caso de que el toque se encuentre dentro del radio de acciï¿½n
 	 * del cuadrado y <code>false</code> en caso contrario 
 	 */
 	private boolean isCercaCuadrado(float xp, float yp) {
@@ -208,13 +208,13 @@ public class MoveTest extends Activity implements OnTouchListener {
 	}
 	
 	/**
-	 * Función que comprueba si las coordenadas que ha tocado el usuario se encuentran dentro del
-	 * radio de acción del círculo. Hay que notar que las coordenadas se miran a partir del centro
-	 * justo del círculo.
+	 * Funciï¿½n que comprueba si las coordenadas que ha tocado el usuario se encuentran dentro del
+	 * radio de acciï¿½n del cï¿½rculo. Hay que notar que las coordenadas se miran a partir del centro
+	 * justo del cï¿½rculo.
 	 * @param xp coordenada x donde apunta el usuario
 	 * @param yp coordenada y donde apunta el usuario
-	 * @return devuelve <code>true</code> en caso de que el toque se encuentre dentro del radio de acción
-	 * del círculo y <code>false</code> en caso contrario 
+	 * @return devuelve <code>true</code> en caso de que el toque se encuentre dentro del radio de acciï¿½n
+	 * del cï¿½rculo y <code>false</code> en caso contrario 
 	 */
 	private boolean isCercaCirculo(float xp, float yp) {
 		boolean res = false;
