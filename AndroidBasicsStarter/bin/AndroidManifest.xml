@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="es.meco4.androidgames"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="16" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="es.meco4.androidgames.AndroidBasicsStarter"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="es.meco4.androidgames.LifeCycleTest"
+            android:label="@string/title_activity_life_cycle_test" >
+        </activity>
+        <activity
+            android:name="es.meco4.androidgames.SingleTouchTest"
+            android:label="@string/title_activity_single_touch_test" >
+        </activity>
+        <activity
+            android:name="es.meco4.androidgames.MultiTouchTest"
+            android:label="@string/title_activity_multi_touch_test" >
+        </activity>
+        <activity
+            android:name="es.meco4.androidgames.KeyTest"
+            android:label="@string/title_activity_key_test" >
+        </activity>
+        <activity
+            android:name="es.meco4.androidgames.AccelerometerTest"
+            android:label="@string/title_accelerometer_test" >
+        </activity>
+        <activity
+            android:name="es.meco4.androidgames.AssetsTest"
+            android:label="@string/title_activity_assets_test" >
+        </activity>
+        <activity
+            android:name="es.meco4.androidgames.ExternalStorageTest"
+            android:label="@string/title_activity_external_storage_test" >
+        </activity>
+        <activity
+            android:name="es.meco4.androidgames.MainActivity"
+            android:label="@string/title_activity_main" >
+        </activity>
+        <activity
+            android:name="es.meco4.androidgames.SoundPoolTest"
+            android:label="@string/title_activity_sound_pool_test" >
+        </activity>
+        <activity
+            android:name="es.meco4.androidgames.MediaPlayerTest"
+            android:label="@string/title_activity_media_player_test" >
+        </activity>
+        <activity
+            android:name="es.meco4.androidgames.FullScreenTest"
+            android:label="@string/title_activity_full_screen_test" >
+        </activity>
+        <activity
+            android:name="es.meco4.androidgames.RenderViewTest"
+            android:label="@string/title_activity_render_view_test" >
+        </activity>
+        <activity
+            android:name="es.meco4.androidgames.ShapeTest"
+            android:label="@string/title_activity_shape_test" >
+        </activity>
+        <activity
+            android:name="es.meco4.androidgames.MoveTest"
+            android:label="@string/title_activity_move_test" >
+        </activity>
+        <activity
+            android:name="es.meco4.androidgames.BitmapTest"
+            android:label="@string/title_activity_bitmap_test" >
+        </activity>
+        <activity
+            android:name="es.meco4.androidgames.FontTest"
+            android:label="@string/title_activity_font_test" >
+        </activity>
+        <activity
+            android:name="es.meco4.androidgames.SurfaceViewTest"
+            android:label="@string/title_activity_surface_view_test" >
+        </activity>
+    </application>
+
+</manifest>

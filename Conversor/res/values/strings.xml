@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Conversor</string>
+    <string name="menu_settings">Opciones</string>
+    <string name="introduce">Introduce el importe</string>
+    <string name="btnConvertir">Convertir moneda</string>
+    <string name="impConvertido">Importe convertido</string>
+    <string name="title_activity_options">Opciones</string>
+    <string name="app_description">Es una aplicación de prueba elaborada por Oscar F. para aprender a programar en Android.</string>
+    <string name="equivalencia">Equivalencia</string>
+    <string name="valCheck">Valor chequeable</string>
+    <string name="menu_about">Acerca de...</string>
+
+</resources>
